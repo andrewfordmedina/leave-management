@@ -24,6 +24,8 @@ namespace leave_management.Data
 
         public DbSet<leave_management.Models.DetailsLeaveTypeVM> DetailsLeaveTypeVM { get; set; }
 
+        public DbSet<leave_management.Models.CreateLeaveTypeVM> CreateLeaveTypeVM { get; set; }
+
 
     }
 }

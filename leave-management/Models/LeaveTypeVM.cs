@@ -10,17 +10,18 @@ namespace leave_management.Models
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [Display(Name= "Date Created")]
-        public DateTime DateCreated { get; set; }
+        public virtual DateTime DateCreated { get; set; }
     }
 
-    public class CreateLeaveTypeVM
+    public class CreateLeaveTypeVM : DetailsLeaveTypeVM
     {
 
-        [Required]
-        public string Name { get; set; }
+       [Required]
+       public override string Name { get; set; }
+
 
     }
 }
