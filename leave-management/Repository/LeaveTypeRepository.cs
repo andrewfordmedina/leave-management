@@ -40,7 +40,12 @@ namespace leave_management.Repository
 
         public ICollection<LeaveType> GetEmployeesByLeaveType(int id)
         {
-            throw new NotImplementedException();
+            return _db.LeaveTypes.Where(q => q.Id == id).ToList();
+        }
+
+        public bool isExisting(int id)
+        {
+            return _db.LeaveTypes.Any(q => q.Id == id);
         }
 
         public bool Save()
